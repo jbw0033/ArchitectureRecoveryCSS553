@@ -11,7 +11,7 @@ col=0
 src=[]
 tar=[]
 print ("Opening XML file: "+sys.argv[1])
-print ("Writing to CSV file: wekadata.csv")
+print ("Writing to CSV file: CSVdata.csv")
 
 with open(sys.argv[1]) as r:
     for line in r:
@@ -49,7 +49,7 @@ with open(sys.argv[1]) as r:
             col=tar.index(data[3])
             table[row][col]+=1
          
-w=open("wekadata.csv",'w')
+w=open("CSVdata.csv",'w')
 w.write("Name")
 for i in range(len(tar)):
     cleaned=tar[i].split('=')
